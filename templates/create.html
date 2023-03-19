@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>create</title>
+{% endblock %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='regform.css') }}">
+  <body>
+    <h1>Student Registration Form</h1>
+    <form method="POST" action="/register">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="Phone">Phone</label>
+      <input type="text" id="phone" name="phone" required><br>
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="" selected disabled hidden>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Famile">Famile</option>
+      </select><br>
+      <label for="grade">Grade:</label>
+      <select id="grade" name="grade" required>
+        <option value="" selected disabled hidden>Select Grade</option>
+        <option value="1">Grade 1</option>
+        <option value="2">Grade 2</option>
+        <option value="3">Grade 3</option>
+        <option value="4">Grade 4</option>
+        <option value="5">Grade 5</option>
+        <option value="6">Grade 6</option>
+        <option value="7">Grade 7</option>
+        <option value="8">Grade 8</option>
+        <option value="9">Grade 9</option>
+        <option value="10">Grade 10</option>
+        <option value="11">Grade 11</option>
+        <option value="12">Grade 12</option>
+      </select><br>
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" required><br>
+      <input type="submit" value="Register">
+    </form>
+  </body>
+{% endblock %}
